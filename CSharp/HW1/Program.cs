@@ -75,7 +75,7 @@ else {
 //а на выходе показывает все чётные числа от 1 до N.
 
 int num;
-Console.Write("напечатайте любое целое число:  ");
+Console.Write("напечатайте любое целое, положительное число:  ");
 num = Convert.ToInt32(Console.ReadLine());
 
 int current = 2;
