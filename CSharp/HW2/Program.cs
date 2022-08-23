@@ -58,7 +58,7 @@ if (num > 99){
 // Задача 15: Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет, является ли этот день выходным.
 
- void week(int num){
+ /*void week(int num){
     if (num == 6 || num == 7){
     Console.WriteLine("Выходной");
     }
@@ -75,5 +75,60 @@ if (num > 99){
 Console.WriteLine("Введите целое положительное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 week(num);
-//} 
+//} */
 
+/*int fun(int num){
+if (num > 99){
+string stroka = Convert.ToString(num);
+num = stroka[2] - '0';
+return num;
+}
+else {
+return -1;
+}
+}
+Console.WriteLine("Введите целое положительное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int result = fun(num);
+if(result == -1){
+Console.WriteLine("Третьей цифры нет");
+}
+else{
+/*int fun(int num){
+    if (num > 99){
+    string stroka = Convert.ToString(num);
+    num = stroka[2] - '0';
+    return num; 
+    } 
+
+    else {
+        return -1;
+    }
+ 
+}
+
+Console.WriteLine("Введите целое положительное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+int result = fun(num);
+if(result == -1){
+Console.WriteLine("Третьей цифры нет");
+}
+else{
+    Console.WriteLine("Третья цифра - " + result);
+}
+
+void week(int num){
+if (num > 5 || num < 8){
+Console.WriteLine("Выходной");
+}
+else{
+if (num > 0 && num < 6){
+Console.WriteLine("Будни");
+}
+else {
+Console.WriteLine("Не является днём недели");
+}
+}
+} */
