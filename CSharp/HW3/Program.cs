@@ -27,7 +27,7 @@
 //находит расстояние между ними в 3D пространстве.
 
 // double average(int x1, int y1, int z1, int x2, int y2, int z2){
-// double num = Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+// double num = Math.Sqrt((x2-x1)*(x2-x1)*(z2-z1)+(y2-y1)*(y2-y1)*(z2-z1));
 // return num; 
 // }
 // Console.WriteLine("Enter x1: ");
