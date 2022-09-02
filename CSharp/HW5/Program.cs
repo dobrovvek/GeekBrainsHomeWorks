@@ -50,8 +50,8 @@ void ShowArray(int[] array){
 
 int NechetSum(int[] array){
     int count = 0;
-    for(int i=0; i<array.Length; i++){
-        if(array[i] % 2 != 0) count+=array[i];
+    for(int i=1; i<array.Length; i += 2){
+        count+=array[i];
     }
     return count;
 }
@@ -66,7 +66,7 @@ int[] array = CreateRandomArray(size, min, max);
 
 ShowArray(array);
 Console.WriteLine();
-Console.WriteLine($"Sum of odd numbers is {NechetSum(array)}");
+Console.WriteLine($"Sum numbers is {NechetSum(array)}");
 */
 
 //Задача 38: Задайте массив вещественных чисел. 
