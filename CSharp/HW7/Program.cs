@@ -29,7 +29,51 @@
 
 //Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 //и возвращает значение этого элемента или же указание, что такого элемента нет.
+// решение верное с координатами. 
 
+int [,] CreateRandom2Array(int rows, int cols, int min, int max){
+    int[,] array = new int[rows, cols];
+    for(int i = 0; i < rows; i++)
+        for(int j = 0; j < cols; j++)
+            array[i,j] = new Random().Next(min,max+1);
+    return array;
+}
+void Show2Array(int[,] array){
+    for(int i= 0; i<array.GetLength(0); i++){
+        Console.WriteLine();
+        for(int j = 0; j < array.GetLength(1); j++){
+            Console.Write($"[{array[i,j]}]  ");
+        }
+    }
+}
+
+void ElementPosition (int a, int b, int [,] array){
+if(a > array.GetLength(0)-1) 
+Console.WriteLine("Your element is not defined");
+else if (b > array.GetLength(1)-1)
+Console.WriteLine("Your element is not defined");
+else Console.WriteLine($"Your element is: [{array[a,b]}]");
+}
+
+Console.Write("Input numb of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input numb of columns: ");
+int cols = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input numb of min: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input numb of max: ");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the first parameter of the element: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter the second parameter of the element: ");
+int b = Convert.ToInt32(Console.ReadLine());
+
+int [,] array = CreateRandom2Array(rows,cols, min,max);
+Show2Array(array);
+Console.WriteLine();
+ElementPosition(a,b,array);
+
+// решение 2 для другого условия оставил чисто для себя, так как долго решал. 
 // int [,] CreateRandom2Array(int rows, int cols, int min, int max){
 //     int[,] array = new int[rows, cols];
 //     for(int i = 0; i < rows; i++)
@@ -72,60 +116,59 @@
 // Show2Array(array);
 // ElementPosition(eN, array);
 
-
 // Задача 52. Задайте двумерный массив из целых чисел. 
 // Найдите среднее арифметическое элементов в каждом столбце.
 // Можно было через void решить и просто выводить цифры, но через массив интереснее )
-int [,] CreateRandom2Array(int rows, int cols, int min, int max){
-    int[,] array = new int[rows, cols];
-    for(int i = 0; i < rows; i++)
-        for(int j = 0; j < cols; j++)
-            array[i,j] = new Random().Next(min,max+1);
-    return array;
-}
-void Show2Array(int[,] array){
-    for(int i= 0; i<array.GetLength(0); i++){
-        Console.WriteLine();
-        for(int j = 0; j < array.GetLength(1); j++){
-            Console.Write($"[{array[i,j]}]  ");
-        }
-    }
-}
+// int [,] CreateRandom2Array(int rows, int cols, int min, int max){
+//     int[,] array = new int[rows, cols];
+//     for(int i = 0; i < rows; i++)
+//         for(int j = 0; j < cols; j++)
+//             array[i,j] = new Random().Next(min,max+1);
+//     return array;
+// }
+// void Show2Array(int[,] array){
+//     for(int i= 0; i<array.GetLength(0); i++){
+//         Console.WriteLine();
+//         for(int j = 0; j < array.GetLength(1); j++){
+//             Console.Write($"[{array[i,j]}]  ");
+//         }
+//     }
+// }
 
-void ShowArray(double[] array){
-    for(int i= 0; i<array.GetLength(0); i++){
-        Console.Write($" {array[i]};");
-    }
-}
+// void ShowArray(double[] array){
+//     for(int i= 0; i<array.GetLength(0); i++){
+//         Console.Write($" {array[i]};");
+//     }
+// }
 
-double [] ArithMean(int[,] array){
-    double sum = 0;
-    double [] arr = new double [array.GetLength(0)];
-    for(int i= 0; i<array.GetLength(0); i++){
-        for(int j= 0; j<array.GetLength(1); j++){
-        sum += array[j,i];
-    }
-        arr[i] = sum/array.GetLength(1);
-        sum = 0;
-  }
-return arr;
-}
+// double [] ArithMean(int[,] array){
+//     double sum = 0;
+//     double [] arr = new double [array.GetLength(0)];
+//     for(int i= 0; i<array.GetLength(0); i++){
+//         for(int j= 0; j<array.GetLength(1); j++){
+//         sum += array[j,i];
+//     }
+//         arr[i] = sum/array.GetLength(1);
+//         sum = 0;
+//   }
+// return arr;
+// }
 
-Console.Write("Input numb of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input numb of columns: ");
-int cols = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input numb of min: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input numb of max: ");
-int max = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input numb of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input numb of columns: ");
+// int cols = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input numb of min: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input numb of max: ");
+// int max = Convert.ToInt32(Console.ReadLine());
 
-int [,] array = CreateRandom2Array(rows,cols, min,max);
-double [] arr = ArithMean(array);
+// int [,] array = CreateRandom2Array(rows,cols, min,max);
+// double [] arr = ArithMean(array);
 
-Show2Array(array);
-ArithMean(array);
-Console.WriteLine();
-Console.Write("The arithmetic mean of the elements in each column: ");
-ShowArray(arr);
+// Show2Array(array);
+// ArithMean(array);
+// Console.WriteLine();
+// Console.Write("The arithmetic mean of the elements in each column: ");
+// ShowArray(arr);
 
