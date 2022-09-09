@@ -33,7 +33,7 @@ Console.WriteLine($"the number of three-digit even numbers is equal to - {Chet(a
 
 //Задача 36: Задайте одномерный массив, заполненный случайными числами. 
 //Найдите сумму элементов, стоящих на нечётных позициях.
-/*
+
 int[] CreateRandomArray(int size, int min, int max) {
     int[] array = new int [size];
     for(int i=0; i<size; i++){
@@ -67,38 +67,38 @@ int[] array = CreateRandomArray(size, min, max);
 ShowArray(array);
 Console.WriteLine();
 Console.WriteLine($"Sum numbers is {NechetSum(array)}");
-*/
+
 
 //Задача 38: Задайте массив вещественных чисел. 
 //Найдите разницу между максимальным и минимальным элементов массива.
 
-double[] DoubRandomArray(int size) {
-    double[] array = new double [size];
-    for(int i=0; i<size; i++){
-        array[i] = new Random().NextDouble();
-    }
-    return array;
-}
+// double[] DoubRandomArray(int size) {
+//     double[] array = new double [size];
+//     for(int i=0; i<size; i++){
+//         array[i] = new Random().NextDouble();
+//     }
+//     return array;
+// }
 
-void ShowArray(double[] array){
-    for(int i=0; i<array.Length; i++){
-        Console.Write($"{array[i]} ");
-    }
-}
+// void ShowArray(double[] array){
+//     for(int i=0; i<array.Length; i++){
+//         Console.Write($"{array[i]} ");
+//     }
+// }
 
-double MaxMin(double[] array){
-    double max = array[0];
-    double min = array[0];
+// double MaxMin(double[] array){
+//     double max = array[0];
+//     double min = array[0];
 
-    for(int i=0; i<array.Length; i++){
-        if(array[i] > max ) max = array[i];
-        if(array[i] < min ) min = array[i];
-    }
-        return max - min;
-}
-Console.WriteLine("input size: ");
-int size = Convert.ToInt32(Console.ReadLine());
-double[] array = DoubRandomArray(size); 
-ShowArray(array);
-Console.WriteLine();
-Console.WriteLine($"max - min = {MaxMin(array)}");
+//     for(int i=0; i<array.Length; i++){
+//         if(array[i] > max ) max = array[i];
+//         if(array[i] < min ) min = array[i];
+//     }
+//         return max - min;
+// }
+// Console.WriteLine("input size: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// double[] array = DoubRandomArray(size); 
+// ShowArray(array);
+// Console.WriteLine();
+// Console.WriteLine($"max - min = {MaxMin(array)}");
