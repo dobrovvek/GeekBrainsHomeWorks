@@ -109,9 +109,9 @@ int Akerman(int n, int m)
     return m + 1;
   else
     if ((n != 0) && (m == 0))
-      return A(n - 1, 1);
+      return Akerman(n - 1, 1);
     else
-      return A(n - 1, A(n, m - 1));
+      return Akerman(n - 1, Akerman(n, m - 1));
 }
 }
 
